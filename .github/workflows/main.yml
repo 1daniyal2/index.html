@@ -1,15 +1,19 @@
-<!DOCTYPE html>
-<html>
-<body>
-<title>  Project </title>
+name: Hello World
 
+on:
+push:
+branches:
 
-<h1>  New Project </h1>
+  - 'main'
+pull_request:
+branches:
 
-<p> this is the github action project. </p>
+  -   'main'
+jobs:
+hello:
+runs-on: ubuntu-latest
 
-</body>
-</html>
+  steps:
 
-
-
+   - name: Hello Step
+     run: echo "hello World"
